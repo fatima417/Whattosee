@@ -4,11 +4,12 @@ import axios from 'axios';
 import '../style/Login.scss';
 import {Box, Button, Typography} from "@mui/material"
 import { fetchUsers } from '../services/sanity/api';
+import { useNavigate, useNavigation } from 'react-router-dom';
 
 const Login = () => {
   const [users, setUsers] = useState([]);
   const [selectedUser, setSelectedUser] = useState(null);
-
+  const navigate = useNavigate() 
   useEffect(() => {
     // Fetch the list of users from an API or some data source
     const getUsers = async () => {
@@ -32,10 +33,13 @@ const Login = () => {
   const handleUserSelect = (user) => {
     setSelectedUser(user);
     handleSaveUsername(user)
+    
+    navigate("/home")
   };
 
   return (
     <Box className='login-section'
+    
     display="flex" flexDirection={"column"} alignItems="center">
       <header className='login-header'>
         <h1>Login</h1>
