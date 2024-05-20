@@ -7,6 +7,6 @@ const Comparison = () => {
       
     </div>
   );
-};
+};w
 
 export default Comparison;

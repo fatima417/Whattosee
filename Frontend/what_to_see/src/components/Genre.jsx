@@ -3,7 +3,6 @@ import { Box, Button, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { get_genre_list } from '../services/movies_api/movies';
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
-import { addFavoriteGenreToUser } from '../services/sanity/api';
 
 
 const Genre = () => {
