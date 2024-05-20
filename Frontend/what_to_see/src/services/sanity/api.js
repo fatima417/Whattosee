@@ -11,6 +11,6 @@ export const fetchGenres = async () => {
 };
 
 export const fetchUsers = async () => {
-  const users = await client.fetch(`*[_type == "user"]{..., favoriteFilms[]->, favoriteGenres[]->}`);
+  const users = await client.fetch(`*[_type == "user"].username`);
   return users;
 };

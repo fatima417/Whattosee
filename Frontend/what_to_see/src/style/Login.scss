@@ -1,0 +1,26 @@
+/* Login.module.scss */
+
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$border-radius: 5px;
+$button-padding: 10px 20px;
+$button-margin: 5px 2px;
+
+
+
+.login-button {
+  
+  cursor: pointer;
+  color: black;
+  &:hover {
+    background: rgb(39, 159, 234);
+    color: black;
+  }
+
+  .user-icon {
+    margin-right: 10px;
+    font-size: 24px;
+  }
+}
+
+
