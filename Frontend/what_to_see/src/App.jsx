@@ -17,7 +17,7 @@ import Comparison from './components/Comparison';
            <Route path="/home" element={<Layout />} >
               <Route index element={<Home />} />
               <Route path='genre' element={<Genre />} />
-              <Route path='categories' element={<Category />} />
+              {/* <Route path='categories' element={<Category />} /> */}
               <Route path='comparison' element={<Comparison/>} />
            </Route>
 

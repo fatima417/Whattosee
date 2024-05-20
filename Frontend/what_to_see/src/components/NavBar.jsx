@@ -17,8 +17,8 @@ import { useNavigate } from 'react-router-dom';
 
 
 const pages = [
-  {name: 'What am I going to watch? ', url :"/home/genre"}, 
-  {name: 'Scroll through categories', url:"/home/categories"}
+  {name: 'What am I going to watch? ', url :"/home"}, 
+  {name: 'Scroll through categories', url:"/home/genre"}
 ];
 
 
