@@ -13,9 +13,15 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import LocalMoviesRoundedIcon from '@mui/icons-material/LocalMoviesRounded';
+import { useNavigate } from 'react-router-dom';
 
 
-const pages = ['What am I going to watch? ', 'Scroll through categories'];
+const pages = [
+  {name: 'What am I going to watch? ', url :"/home/genre"}, 
+  {name: 'Scroll through categories', url:"/home/categories"}
+];
+
+
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function NavBar() {
@@ -101,8 +107,8 @@ function NavBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.url} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center" href={page.url}>{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -129,11 +135,12 @@ function NavBar() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.url}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
+                href={page.url}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
